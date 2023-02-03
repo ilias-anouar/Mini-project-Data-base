@@ -99,11 +99,30 @@ main {
 .collapsing {
     height: 0;
     overflow: hidden;
-    transition:0.10s;
+    transition: 0.10s;
 }
 
 .collapsing.collapse-horizontal {
     width: 0;
     height: auto;
-    transition:0.10s;
+    transition: 0.10s;
+}
+
+.save {
+    height: 40px;
+    width: 100px;
+    color: white;
+    background-color: #AD9663;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-control {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+}
+
+.form-control:focus {
+    border-bottom: #AD9663 solid 3px;
 }
