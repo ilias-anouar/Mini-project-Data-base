@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- logo font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="IMG/favicon.ico">
@@ -24,25 +25,43 @@
 </head>
 
 <body>
-    <header>
-        <div><img src="IMG/logo-01.png" alt="logo-01"><br><p>HOME</p></div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Rate</a></li>
-                <li><a href="#">New Adverts</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>WELCOME HOME</h1>
-        <p>Recently sells</p>
-        <button>Search</button>
-        <button>Add</button>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <header id="Home">
+            <div><img src="IMG/logo-01.png" alt="logo-01"><br>
+                <p>HOME</p>
+            </div>
+            <nav class="navbar nav-pills navbar-expand-lg" id="navbar">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#Home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Rate">Rate</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Adverts">Adverts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>WELCOME HOME</h1>
+            <p>Recently sells</p>
+            <button>Search</button>
+            <button>Add</button>
+        </header>
+        <main>
+            <section id="Rate"></section>
+            <section id="Adverts"></section>
+        </main>
+        <footer id="Contact">
+        </footer>
+    </div>
 </body>
 
 </html>
