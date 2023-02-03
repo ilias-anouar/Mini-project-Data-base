@@ -27,69 +27,54 @@
 <body>
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-      </div>
-  
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
-        <div class="carousel-item active">  
-          <img src="IMG/sl0.jpg" alt="Los Angeles"  class="d-block w-100  shadow-lg">
-          <div class="carousel-caption d-flex justify-content-lg-start">
-
-            <h1 class="text-center ">WELCOME HOME</h1>
-            <p class="display-2 fw-normal">Recently sells</p>
-            <button>Search</button>
-            <button>Add</button>
-          </div>
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
         </div>
-        <div class="carousel-item">
-          <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100  shadow-lg ">
-          <div class="carousel-caption ">
 
-            <h1>WELCOME HOME</h1>
-            <p class="display-2 fw-normal">Recently sells</p>
-            <button>Search</button>
-            <button>Add</button>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/sl2.jpg" alt="New York" class="d-block w-100  shadow-lg">
-          <div class="carousel-caption d-grid justify-content-center">
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="IMG/sl0.jpg" alt="Los Angeles" class="d-block w-100">
 
-            <h1 class="">WELCOME HOME</h1>
-            <p class="display-2 fw-normal">Recently sells</p>
-            <button>Search</button>
-            <button>Add</button>
-          </div>
+            </div>
+            <div class="carousel-item">
+                <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="IMG/sl2.jpg" alt="New York" class="d-block w-100">
+            </div>
         </div>
-      </div>
-  
-      <!-- Left and right controls/icons -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
 
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
-        class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
         <header id="Home">
-            <div><img src="IMG/logo-01.png" alt="logo-01"><br>
-                <p>HOME</p>
+            <div class="d-flex flex-column align-items-center"><img src="IMG/logo-01.png" width="120px" height="120px"
+                    alt="logo-01">
+                <p class="logo">HOME</p>
             </div>
             <nav class="navbar nav-pills navbar-expand-lg" id="navbar">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#Home">Home</a>
+                                <a class="nav-link" href="#Home">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#Rate">Rate</a>
@@ -106,34 +91,154 @@
             </nav>
             <h1>WELCOME HOME</h1>
             <p class="display-2 fw-normal">Recently sells</p>
-            <button>Search</button>
-            <button>Add</button>
+            <div class="d-flex">
+                <div>
+                    <p>
+                        <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
+                            aria-expanded="false" aria-controls="search-bar">
+                            Search
+                        </button>
+                    </p>
+                </div>
+                <div style="min-height: 65px;">
+                    <div class="collapse collapse-horizontal" id="search-bar">
+                        <div class="card card-body">
+                            <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                <option value="#">Type</option>
+                                <option value="Selling">Selling</option>
+                                <option value="Renting">Renting</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn add">Add</button>
         </header>
-        <main>
-            <section class="text-center" id="Rate">
+        <main class="pb-5">
+            <section class="text-center pt-5 mb-5" id="Rate">
                 <h2 class="mb-5">BOSTON'S TOP OFFICE</h2>
                 <div class="d-flex justify-content-around">
                     <div>
                         <h2 class="card-title display-4 fw-bold">#1</h2>
                         <h3 class="card-subtitle text-muted">OFFICE</h3>
-                        <p class="card-text"><span>HOME</span> Rank for<br>Boston Luxury Market Share</p>
+                        <p class="card-text"><span class="logo">HOME</span> Rank for<br>Boston Luxury Market Share</p>
                     </div>
                     <div>
                         <h2 class="card-title display-4 fw-bold">$8</h2>
                         <h3 class="card-subtitle text-muted">BILLION</h3>
-                        <p class="card-text">Amount of Real Estate Sold by <span>HOME</span></p>
+                        <p class="card-text">Amount of Real Estate Sold by<br><span class="logo">HOME</span></p>
                     </div>
                     <div>
-                        <h2 class="card-title display-4 fw-bold">#16</h2>
+                        <h2 class="card-title display-3 fw-bold">#16</h2>
                         <h3 class="card-subtitle text-muted">YEARS</h3>
-                        <p class="card-text"><span>HOME</span> is Celebrating Sixteen Years of<br>Excellence as Premier
+                        <p class="card-text"><span class="logo">HOME</span> is Celebrating Sixteen Years
+                            of<br>Excellence as Premier
                             Luxury Agency</p>
                     </div>
                 </div>
             </section>
-            <section id="Adverts"></section>
+            <section class="text-center" id="Adverts">
+                <h2 class="mb-5">OUR NEW ADVERT</h2>
+                <div class="d-flex">
+                    <img src="IMG/side_image.png" alt="side-image">
+                    <div class="d-flex justify-content-around gap-5 flex-wrap wrap">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="IMG/side_image.png" alt="side-image">
+                </div>
+            </section>
         </main>
-        <footer id="Contact">
+        <footer class="text-center pt-5 pb-5" id="Contact">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <div>
+                    <img src="IMG/logo-01.png" width="120px" height="120px" alt="logo-01"><br>
+                    <p class="logo">HOME</p>
+                </div>
+                <div>
+                    <p>©2023 Home Company | Privacy Policy</p>
+                    <p>info@home.com | 617-203-6174</p>
+                </div>
+                <img src="IMG/fotter.png" width="400" alt="footer">
+            </div>
         </footer>
     </div>
 </body>

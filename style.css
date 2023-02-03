@@ -1,9 +1,82 @@
-*{
+* {
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
-.carousel-item img {
-    height: 100vh;
-    /* backdrop-filter: sepia(90%); */
-    filter: brightness(50%);
-  }
-   
+/*
+***nav bar 
+**add position to nav bar => fixed.
+**add color and hover effects.
+**add the active color and bg color => for scrollspy.
+ */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #3838387a;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+}
+
+nav .navbar-nav li a:hover {
+    color: #AD9663 !important;
+    background-color: white;
+}
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.nav-link.active {
+    color: #AD9663 !important;
+    background-color: white !important;
+}
+/* 
+***add style to logo:
+**color and font.
+ */
+.logo {
+    color: #AD9663;
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    font-weight: bold;
+}
+/*
+***the bg-image  for sections:
+**main & footer.
+ */
+main {
+    background-image: url(IMG/main_image.jpg);
+    background-size: cover;
+}
+
+#Contact {
+    background-image: url(IMG/main_image.jpg);
+    background-size: cover;
+}
+/*
+***buttons: 
+**add color and resize
+ */
+ .btn{
+    border: none;
+    border-radius: 26px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #383838;
+    width: 177px;
+    height: 65px;
+ }
+ .btn:hover{
+    color:#383838 ;
+    background-color: #B5C98E;
+ }
+ .btn:active{
+    color: white !important;
+    background-color: #AD9663 !important;
+ }
+ 
