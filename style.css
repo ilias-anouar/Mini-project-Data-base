@@ -57,3 +57,25 @@ main {
     background-image: url(IMG/main_image.jpg);
     background-size: cover;
 }
+/*
+***buttons: 
+**add color and resize
+ */
+ .btn{
+    border: none;
+    border-radius: 26px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #383838;
+    width: 177px;
+    height: 65px;
+ }
+ .btn:hover{
+    color:#383838 ;
+    background-color: #B5C98E;
+ }
+ .btn:active{
+    background-color: #aaff00 !important;
+ }
+ 
