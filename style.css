@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+
 /*
 ***nav bar 
 **add position to nav bar => fixed.
@@ -34,6 +35,7 @@ nav .navbar-nav li a:hover {
     color: #AD9663 !important;
     background-color: white !important;
 }
+
 /* 
 ***add style to logo:
 **color and font.
@@ -44,6 +46,7 @@ nav .navbar-nav li a:hover {
     font-size: x-large;
     font-weight: bold;
 }
+
 /*
 ***the bg-image  for sections:
 **main & footer.
@@ -57,11 +60,12 @@ main {
     background-image: url(IMG/main_image.jpg);
     background-size: cover;
 }
+
 /*
 ***buttons: 
 **add color and resize
  */
- .btn{
+.btn {
     border: none;
     border-radius: 26px;
     color: white;
@@ -70,13 +74,36 @@ main {
     background-color: #383838;
     width: 177px;
     height: 65px;
- }
- .btn:hover{
-    color:#383838 ;
+}
+
+.btn:hover {
+    color: #383838;
     background-color: #B5C98E;
- }
- .btn:active{
+}
+
+.btn:active {
     color: white !important;
     background-color: #AD9663 !important;
- }
- 
+}
+
+.bg-color {
+    border-radius: 26px;
+    background-color: #B5C98E;
+}
+
+/* collapse button  */
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition:0.10s;
+}
+
+.collapsing.collapse-horizontal {
+    width: 0;
+    height: auto;
+    transition:0.10s;
+}

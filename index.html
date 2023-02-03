@@ -100,15 +100,23 @@
                         </button>
                     </p>
                 </div>
-                <div style="min-height: 65px;">
-                    <div class="collapse collapse-horizontal" id="search-bar">
-                        <div class="card card-body">
-                            <select class="form-select" aria-label=".form-select" name="type" id="type">
-                                <option value="#">Type</option>
-                                <option value="Selling">Selling</option>
-                                <option value="Renting">Renting</option>
-                            </select>
-                            
+                <div>
+                    <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                        <div class="d-flex gap-2">
+                            <div>
+                                <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                    <option value="#">Type</option>
+                                    <option value="Selling">Selling</option>
+                                    <option value="Renting">Renting</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <!-- <label for="Price">Price</label> -->
+                                <input type="number" name="Price-max" class="form-control" placeholder="Max"
+                                    aria-label="Max" aria-describedby="basic-addon1">
+                                <input type="number" name="Price-min" class="form-control" placeholder="Min"
+                                    aria-label="Min" aria-describedby="basic-addon1">
+                            </div>
                         </div>
                     </div>
                 </div>
