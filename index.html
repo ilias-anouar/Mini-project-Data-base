@@ -65,7 +65,8 @@
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
         class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
         <header id="Home">
-            <div class="d-flex flex-column align-items-center"><img src="IMG/logo-01.png" width="120px" height="120px" alt="logo-01">
+            <div class="d-flex flex-column align-items-center"><img src="IMG/logo-01.png" width="120px" height="120px"
+                    alt="logo-01">
                 <p class="logo">HOME</p>
             </div>
             <nav class="navbar nav-pills navbar-expand-lg" id="navbar">
@@ -90,7 +91,27 @@
             </nav>
             <h1>WELCOME HOME</h1>
             <p class="display-2 fw-normal">Recently sells</p>
-            <button class="btn search">Search</button>
+            <div class="d-flex">
+                <div>
+                    <p>
+                        <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
+                            aria-expanded="false" aria-controls="search-bar">
+                            Search
+                        </button>
+                    </p>
+                </div>
+                <div style="min-height: 65px;">
+                    <div class="collapse collapse-horizontal" id="search-bar">
+                        <div class="card card-body">
+                            <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                <option value="#">Type</option>
+                                <option value="Selling">Selling</option>
+                                <option value="Renting">Renting</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button class="btn add">Add</button>
         </header>
         <main class="pb-5">

@@ -76,6 +76,7 @@ main {
     background-color: #B5C98E;
  }
  .btn:active{
-    background-color: #aaff00 !important;
+    color: white !important;
+    background-color: #AD9663 !important;
  }
  
