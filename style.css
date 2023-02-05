@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /*
@@ -10,30 +10,30 @@
 **add the active color and bg color => for scrollspy.
  */
 #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: #3838387a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #3838387a;
 }
 
 nav .navbar-nav li a {
-    color: white !important;
+  color: white !important;
 }
 
 nav .navbar-nav li a:hover {
-    color: #AD9663 !important;
-    background-color: white;
+  color: #ad9663 !important;
+  background-color: white;
 }
 
 .nav-link {
-    color: white !important;
-    text-transform: uppercase;
+  color: white !important;
+  text-transform: uppercase;
 }
 
 .nav-link.active {
-    color: #AD9663 !important;
-    background-color: white !important;
+  color: #ad9663 !important;
+  background-color: white !important;
 }
 
 /* 
@@ -41,10 +41,10 @@ nav .navbar-nav li a:hover {
 **color and font.
  */
 .logo {
-    color: #AD9663;
-    font-family: 'Dancing Script', cursive;
-    font-size: x-large;
-    font-weight: bold;
+  color: #ad9663;
+  font-family: "Dancing Script", cursive;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 /*
@@ -52,13 +52,13 @@ nav .navbar-nav li a:hover {
 **main & footer.
  */
 main {
-    background-image: url(IMG/main_image.jpg);
-    background-size: cover;
+  background-image: url(IMG/main_image.jpg);
+  background-size: cover;
 }
 
 #Contact {
-    background-image: url(IMG/main_image.jpg);
-    background-size: cover;
+  background-image: url(IMG/main_image.jpg);
+  background-size: cover;
 }
 
 /*
@@ -66,69 +66,101 @@ main {
 **add color and resize
  */
 .btn {
-    border: none;
-    border-radius: 26px;
-    color: white;
-    font-size: 26px;
-    font-weight: bold;
-    background-color: #383838;
-    width: 177px;
-    height: 65px;
+  border: none;
+  border-radius: 26px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: #383838;
+  width: 177px;
+  height: 65px;
 }
 
 .btn:hover {
-    color: #383838;
-    background-color: #B5C98E;
+  color: #383838;
+  background-color: #b5c98e;
 }
 
 .btn:active {
-    color: white !important;
-    background-color: #AD9663 !important;
+  color: white !important;
+  background-color: #ad9663 !important;
 }
 
 .bg-color {
-    border-radius: 26px;
-    background-color: #B5C98E;
+  border-radius: 26px;
+  background-color: #b5c98e;
 }
 
 /* collapse button  */
 .collapse:not(.show) {
-    display: none;
+  display: none;
 }
 
 .collapsing {
-    height: 0;
-    overflow: hidden;
-    transition: 0.10s;
+  height: 0;
+  overflow: hidden;
+  transition: 0.1s;
 }
 
 .collapsing.collapse-horizontal {
-    width: 0;
-    height: auto;
-    transition: 0.10s;
+  width: 0;
+  height: auto;
+  transition: 0.1s;
 }
 
 .save {
-    height: 40px;
-    width: 100px;
-    color: white;
-    background-color: #AD9663;
-    border: none;
-    border-radius: 10px;
+  height: 40px;
+  width: 100px;
+  color: white;
+  background-color: #ad9663;
+  border: none;
+  border-radius: 10px;
 }
-button.save:hover{
-    transition: 0.2s;
-    color: #AD9663;
-    border: #AD9663 solid 2px;
-    background-color: white;
+button.save:hover {
+  transition: 0.2s;
+  color: #ad9663;
+  border: #ad9663 solid 2px;
+  background-color: white;
 }
 
 .form-control {
-    border: 0;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid black;
 }
 
 .form-control:focus {
-    border-bottom: #AD9663 solid 3px;
+  border-bottom: #ad9663 solid 3px;
+}
+
+.cont {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  background-color: black;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container:hover .card {
+  opacity: 0.3;
+}
+
+.cont:hover .middle {
+  opacity: 1;
 }
