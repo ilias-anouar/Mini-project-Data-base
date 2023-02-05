@@ -116,6 +116,12 @@ main {
     border: none;
     border-radius: 10px;
 }
+button.save:hover{
+    transition: 0.2s;
+    color: #AD9663;
+    border: #AD9663 solid 2px;
+    background-color: white;
+}
 
 .form-control {
     border: 0;
