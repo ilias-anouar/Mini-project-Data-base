@@ -3,6 +3,13 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+
+.carousel-item  img {
+    height: 100vh;
+    filter: brightness(50%);
+}
+
+
 /*
 ***nav bar 
 **add position to nav bar => fixed.
@@ -10,11 +17,11 @@
 **add the active color and bg color => for scrollspy.
  */
 #navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  background-color: #3838387a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color:  #38383891;
 }
 
 nav .navbar-nav li a {

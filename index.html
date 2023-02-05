@@ -3,84 +3,254 @@
 
 <head>
     <meta charset="UTF-8">
+    </meta>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </link>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </link>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    </link>
+
     <!-- logo font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </link>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+    </link>
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    </link>
 
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </link>
+
     <link rel="icon" type="image/x-icon" href="IMG/favicon.ico">
+    </link>
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    </link>
+
+    <script src="script.js" defer="defer"></script>
+
     <title>Home</title>
 </head>
 
 <body>
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-        <!-- Indicators/dots -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-        </div>
-
-        <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="IMG/sl0.jpg" alt="Los Angeles" class="d-block w-100">
-
-            </div>
-            <div class="carousel-item">
-                <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100">
-                <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="IMG/sl2.jpg" alt="New York" class="d-block w-100">
-            </div>
-        </div>
-
-        <!-- Left and right controls/icons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
         class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
         <header id="Home">
-            <div class="d-flex flex-column align-items-center"><img src="IMG/logo-01.png" width="120px" height="120px"
-                    alt="logo-01">
-                <p class="logo">HOME</p>
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="IMG/sl0.jpg" alt="Los Angeles" class="d-block w-100">
+
+                        <div class="carousel-caption">
+                            <h1 class="display-1 fw-bolder">WELCOME HOME</h1>
+
+                            <br>
+
+                            <p class="display-5 fw-semibold">RECENTLY SELLS</p>
+
+                            <div class="d-flex container justify-content-between">
+                                <div class="d-flex">
+                                    <div>
+                                        <p>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#search-bar" aria-expanded="false"
+                                                aria-controls="search-bar">Search</button>
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                            <div class="d-flex gap-2">
+                                                <div>
+                                                    <select class="form-select" aria-label=".form-select" name="type"
+                                                        id="type">
+                                                        <option value="#">Type</option>
+
+                                                        <option value="Selling">Selling</option>
+
+                                                        <option value="Renting">Renting</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="input-group gap-4">
+                                                    <input type="number" name="Price-max" class="form-control"
+                                                        placeholder="Max" aria-label="Max"
+                                                        aria-describedby="basic-addon1"></input>
+
+                                                    <input type="number" name="Price-min" class="form-control"
+                                                        placeholder="Min" aria-label="Min"
+                                                        aria-describedby="basic-addon1"></input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100">
+
+                        <div class="carousel-caption">
+                            <h1 class="display-1 fw-bolder">WELCOME HOME</h1>
+
+                            <p class="display-5 fw-semibold">RECENTLY SELLS</p>
+
+                            <div class="d-flex container justify-content-between">
+                                <div class="d-flex">
+                                    <div>
+                                        <p>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#search-bar" aria-expanded="false"
+                                                aria-controls="search-bar">Search</button>
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <select class="form-select" aria-label=".form-select" name="type"
+                                                        id="type">
+                                                        <option value="#">Type</option>
+
+                                                        <option value="Selling">Selling</option>
+
+                                                        <option value="Renting">Renting</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="input-group gap-4">
+                                                    <input type="number" name="Price-max" class="form-control"
+                                                        placeholder="Max" aria-label="Max"
+                                                        aria-describedby="basic-addon1"></input>
+
+                                                    <input type="number" name="Price-min" class="form-control"
+                                                        placeholder="Min" aria-label="Min"
+                                                        aria-describedby="basic-addon1"></input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="IMG/sl2.jpg" alt="New York" class="d-block w-100">
+
+                        <div class="carousel-caption">
+                            <h1 class="display-1 fw-bolder">WELCOME HOME</h1>
+
+                            <p class="display-5 fw-semibold">RECENTLY SELLS</p>
+
+                            <div class="d-flex container justify-content-between">
+                                <div class="d-flex">
+                                    <div>
+                                        <p>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#search-bar" aria-expanded="false"
+                                                aria-controls="search-bar">Search</button>
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <select class="form-select" aria-label=".form-select" name="type"
+                                                        id="type">
+                                                        <option value="#">Type</option>
+
+                                                        <option value="Selling">Selling</option>
+
+                                                        <option value="Renting">Renting</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="input-group gap-4">
+                                                    <input type="number" name="Price-max" class="form-control"
+                                                        placeholder="Max" aria-label="Max"
+                                                        aria-describedby="basic-addon1"></input>
+
+                                                    <input type="number" name="Price-min" class="form-control"
+                                                        placeholder="Min" aria-label="Min"
+                                                        aria-describedby="basic-addon1"></input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
+
             <nav class="navbar nav-pills navbar-expand-lg" id="navbar">
+                <div class="d-block text-center">
+                    <img src="IMG/logo-01.png" width="50px" height="50px" alt="logo-01">
+
+                    <br>
+
+                    <p class="logo">HOME</p>
+                </div>
+
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="#Home">Home</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#Rate">Rate</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#Adverts">Adverts</a>
                             </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#Contact">Contact</a>
                             </li>
@@ -88,67 +258,67 @@
                     </div>
                 </div>
             </nav>
-            <h1>WELCOME HOME</h1>
-            <p class="display-2 fw-normal">Recently sells</p>
-            <div class="d-flex">
-                <div>
-                    <p>
-                        <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
-                            aria-expanded="false" aria-controls="search-bar">
-                            Search
-                        </button>
-                    </p>
-                </div>
-                <div>
-                    <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                        <div class="d-flex gap-2">
-                            <div class="w-50">
-                                <select class="form-select" aria-label=".form-select" name="type" id="type">
-                                    <option value="#">Type</option>
-                                    <option value="Selling">Selling</option>
-                                    <option value="Renting">Renting</option>
-                                </select>
-                            </div>
-                            <div class="input-group w-50 gap-2">
-                                <!-- <label for="Price">Price</label> -->
-                                <input type="number" name="Price-max" class="form-control" placeholder="Max price"
-                                    aria-label="Max" aria-describedby="basic-addon1">
-                                <input type="number" name="Price-min" class="form-control" placeholder="Min price"
-                                    aria-label="Min" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
         </header>
+
         <main class="pb-5">
             <section class="text-center pt-5 mb-5" id="Rate">
                 <h2 class="mb-5">BOSTON'S TOP OFFICE</h2>
+
                 <div class="d-flex justify-content-around">
                     <div>
                         <h2 class="card-title display-4 fw-bold">#1</h2>
+
                         <h3 class="card-subtitle text-muted">OFFICE</h3>
-                        <p class="card-text"><span class="logo">HOME</span> Rank for<br>Boston Luxury Market Share</p>
+
+                        <p class="card-text">
+                            <span class="logo">HOME</span>
+
+                            Rank for
+
+                            <br>
+                            Boston Luxury Market Share
+                        </p>
                     </div>
+
                     <div>
                         <h2 class="card-title display-4 fw-bold">$8</h2>
+
                         <h3 class="card-subtitle text-muted">BILLION</h3>
-                        <p class="card-text">Amount of Real Estate Sold by<br><span class="logo">HOME</span></p>
+
+                        <p class="card-text">
+                            Amount of Real Estate Sold by
+
+                            <br>
+
+                            <span class="logo">HOME</span>
+                        </p>
                     </div>
+
                     <div>
                         <h2 class="card-title display-3 fw-bold">#16</h2>
+
                         <h3 class="card-subtitle text-muted">YEARS</h3>
-                        <p class="card-text"><span class="logo">HOME</span> is Celebrating Sixteen Years
-                            of<br>Excellence as Premier
-                            Luxury Agency</p>
+
+                        <p class="card-text">
+                            <span class="logo">HOME</span>
+
+                            is Celebrating Sixteen Years
+                            of
+
+                            <br>
+                            Excellence as Premier
+                            Luxury Agency
+                        </p>
                     </div>
                 </div>
             </section>
+
             <section class="text-center" id="Adverts">
                 <h2 class="mb-5">OUR NEW ADVERT</h2>
+
                 <div class="d-flex">
                     <img src="IMG/side_image.png" alt="side-image">
+
                     <div class="d-flex justify-content-around gap-5 flex-wrap wrap">
                         <div class="cont">
                             <div class="card image">
@@ -271,32 +441,46 @@
                             </div>
                         </div>
                     </div>
+
                     <img src="IMG/side_image.png" alt="side-image">
                 </div>
             </section>
         </main>
+
         <footer class="text-center pt-5 pb-5" id="Contact">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <div>
-                    <img src="IMG/logo-01.png" width="120px" height="120px" alt="logo-01"><br>
+                    <img src="IMG/logo-01.png" width="120px" height="120px" alt="logo-01">
+
+                    <br>
+
                     <p class="logo">HOME</p>
                 </div>
+
                 <div>
-                    <p>©2023 Home Company | Privacy Policy</p>
+                    <p>
+                        ©2023 Home Company | Privacy Policy
+                    </p>
+
                     <p>info@home.com | 617-203-6174</p>
                 </div>
+
                 <img src="IMG/fotter.png" width="400" alt="footer">
             </div>
         </footer>
     </div>
-    <!-- modale ADD-->
+
+    <!-- modale ADD -->
+
     <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 <div class="modal-body">
                     <form class="text-center" method="get">
                         <h2 class="fw-bold">Add advert</h2>
+
                         <div class="d-flex justify-content-evenly">
                             <div>
                                 <div class="form-floating mb-3">
@@ -304,43 +488,53 @@
                                         placeholder="Title">
                                     <label for="floatingInput">Title</label>
                                 </div>
+
                                 <div class="form-floating  mb-3">
                                     <input name="Address" type="text" class="form-control shadow-none"
                                         id="floatingPassword" placeholder="Address">
                                     <label for="floatingPassword">Address</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
                                     <input name="Space" type="number" class="form-control shadow-none"
                                         id="floatingPassword" placeholder="Space">
                                     <label for="floatingPassword">Space</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
                                     <input name="date" type="date" class="form-control shadow-none"
                                         id="floatingPassword" placeholder="Date">
                                     <label for="floatingPassword">Date</label>
                                 </div>
                             </div>
+
                             <div>
                                 <div class="form-floating mb-3">
                                     <input name="price" type="number" class="form-control shadow-none"
                                         id="floatingPassword" placeholder="Price">
                                     <label for="floatingPassword">Price</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
                                     <select name="type" class="form-control shadow-none" aria-label=".form-select"
                                         name="type" id="type">
                                         <option value="#"></option>
+
                                         <option value="Selling">Selling</option>
+
                                         <option value="Renting">Renting</option>
                                     </select>
+
                                     <label for="Type">Type</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
                                     <textarea name="Description" class="form-control shadow-none"
                                         placeholder="Description" id="floatingTextarea2"
                                         style="height: 60px"></textarea>
                                     <label for="floatingTextarea2">Description</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
                                     <input name="image" type="file" class="form-control shadow-none"
                                         id="floatingPassword" placeholder="Image">
@@ -348,6 +542,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
                             <button name="add" type="submit" class="save">ADD</button>
                         </div>
@@ -356,6 +551,7 @@
             </div>
         </div>
     </div>
+
     <!-- modale delete -->
 
 </body>
