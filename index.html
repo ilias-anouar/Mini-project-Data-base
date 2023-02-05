@@ -25,34 +25,154 @@
 </head>
 
 <body>
+    <header id="Home">
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Indicators/dots -->
+  
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
             <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
         </div>
 
-        <!-- The slideshow/carousel -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="IMG/sl0.jpg" alt="Los Angeles" class="d-block w-100">
-
+                <div class="carousel-caption">
+                   
+                        <h1 class="display-1 fw-bolder ">WELCOME HOME </h1>
+                        <br>
+                         <p class="display-5 fw-semibold  ">RECENTLY SELLS</p>
+                
+                      
+    
+                    <div class="d-flex container justify-content-between">
+                        <div class="d-flex">
+                            <div>
+                                <p>
+                                    <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
+                                        aria-expanded="false" aria-controls="search-bar">
+                                        Search
+                                    </button>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                    <div class="d-flex gap-2">
+                                        <div>
+                                            <select class="form-select  " aria-label=".form-select" name="type" id="type">
+                                                <option value="#">Type</option>
+                                                <option value="Selling">Selling</option>
+                                                <option value="Renting">Renting</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group gap-4 ">
+                                         
+                                            <input type="number" name="Price-max" class="form-control " placeholder="Max"
+                                                aria-label="Max" aria-describedby="basic-addon1">
+                                            <input type="number" name="Price-min" class="form-control" placeholder="Min"
+                                                aria-label="Min" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                    </div>
+                   
+       
+                   </div>
             </div>
-            <div class="carousel-item">
+           <div class="carousel-item">
                 <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100">
                 <div class="carousel-caption">
-                    <h3>Los Angeles</h3>
-                    <p>We had such a great time in LA!</p>
-                </div>
+                    <h1 class="display-1 fw-bolder">WELCOME HOME </h1>
+                    <p class="display-5 fw-semibold">RECENTLY SELLS</p>
+                    <div class="d-flex container justify-content-between">
+                        <div class="d-flex">
+                            <div>
+                                <p>
+                                    <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
+                                        aria-expanded="false" aria-controls="search-bar">
+                                        Search
+                                    </button>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                    <div class="d-flex">
+                                        <div>
+                                            <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                <option value="#">Type</option>
+                                                <option value="Selling">Selling</option>
+                                                <option value="Renting">Renting</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group gap-4">
+                                         
+                                            <input type="number" name="Price-max" class="form-control" placeholder="Max"
+                                                aria-label="Max" aria-describedby="basic-addon1">
+                                            <input type="number" name="Price-min" class="form-control" placeholder="Min"
+                                                aria-label="Min" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                    </div>
+                   
+       
+                   </div>
             </div>
             <div class="carousel-item">
                 <img src="IMG/sl2.jpg" alt="New York" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h1 class="display-1 fw-bolder ">WELCOME HOME </h1>
+                    <p  class="display-5 fw-semibold">RECENTLY SELLS</p>
+                    <div class="d-flex container justify-content-between">
+                        <div class="d-flex">
+                            <div>
+                                <p>
+                                    <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
+                                        aria-expanded="false" aria-controls="search-bar">
+                                        Search
+                                    </button>
+                                </p>
+                            </div>
+                            <div>
+                                <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
+                                    <div class="d-flex">
+                                        <div>
+                                            <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                <option value="#">Type</option>
+                                                <option value="Selling">Selling</option>
+                                                <option value="Renting">Renting</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group gap-4">
+                                         
+                                            <input type="number" name="Price-max" class="form-control" placeholder="Max"
+                                                aria-label="Max" aria-describedby="basic-addon1">
+                                            <input type="number" name="Price-min" class="form-control" placeholder="Min"
+                                                aria-label="Min" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+                    </div>
+                   
+       
+                   </div>
             </div>
         </div>
 
-        <!-- Left and right controls/icons -->
+      
         <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
@@ -64,12 +184,14 @@
 
     <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
         class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
-        <header id="Home">
-            <div class="d-flex flex-column align-items-center"><img src="IMG/logo-01.png" width="120px" height="120px"
-                    alt="logo-01">
-                <p class="logo">HOME</p>
-            </div>
+      
+         
             <nav class="navbar nav-pills navbar-expand-lg" id="navbar">
+                <div class="d-block text-center" >
+                    <img  src="IMG/logo-01.png" width="50px" height="50px" alt="logo-01"><br>
+                    <p class="logo">HOME</p>
+                </div>
+
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
@@ -89,39 +211,8 @@
                     </div>
                 </div>
             </nav>
-            <h1>WELCOME HOME</h1>
-            <p class="display-2 fw-normal">Recently sells</p>
-            <div class="d-flex">
-                <div>
-                    <p>
-                        <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar"
-                            aria-expanded="false" aria-controls="search-bar">
-                            Search
-                        </button>
-                    </p>
-                </div>
-                <div>
-                    <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                        <div class="d-flex gap-2">
-                            <div>
-                                <select class="form-select" aria-label=".form-select" name="type" id="type">
-                                    <option value="#">Type</option>
-                                    <option value="Selling">Selling</option>
-                                    <option value="Renting">Renting</option>
-                                </select>
-                            </div>
-                            <div class="input-group">
-                                <!-- <label for="Price">Price</label> -->
-                                <input type="number" name="Price-max" class="form-control" placeholder="Max"
-                                    aria-label="Max" aria-describedby="basic-addon1">
-                                <input type="number" name="Price-min" class="form-control" placeholder="Min"
-                                    aria-label="Min" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="btn add" data-bs-toggle="modal" data-bs-target="#modal-add">Add</button>
+           
+           
         </header>
         <main class="pb-5">
             <section class="text-center pt-5 mb-5" id="Rate">
