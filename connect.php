@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "ilias";
-$password = "iilliiaass080701";
-$dbname = "ilias";
+$username = "root";
+$password = "";
+$dbname = "announcements";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,7 +12,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-if (isset($_GET["add"])) {
-    echo "hello";
-}
 ?>
