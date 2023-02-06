@@ -10,7 +10,6 @@ if (isset($_GET["search"])) {
     if ($_GET["type"] != null) {
         $min = $_GET["Price-min"];
     }
-
 }
 
 ?>
