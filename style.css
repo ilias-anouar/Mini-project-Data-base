@@ -52,7 +52,7 @@ nav .navbar-nav li a:hover {
   font-family: "Dancing Script", cursive;
   font-size: x-large;
   font-weight: bold;
- 
+
 
 }
 
@@ -163,4 +163,26 @@ button.save:hover {
 
 .card:hover .image-overlay {
   opacity: 1;
+}
+
+/* modal */
+.modal-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.50);
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 5px 25px;
+}
+
+.btn-cancel {
+  background-color:#ad9663;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 5px 25px;
 }

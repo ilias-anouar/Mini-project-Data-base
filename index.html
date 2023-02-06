@@ -314,7 +314,7 @@
                 <h2 class="mb-5">OUR NEW ADVERT</h2>
                 <div class="d-flex">
                     <img src="IMG/side_image.png" alt="side-image">
-                    <div class="d-flex gap-2 flex-wrap">
+                    <div class="d-flex justify-content-around gap-2 flex-wrap">
                         <div class="m-4">
                             <div class="card" style="width: 18rem;">
                                 <!-- A div to hold img and img-overlay -->
@@ -324,7 +324,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -364,7 +364,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -384,7 +384,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -404,7 +404,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -424,7 +424,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -444,7 +444,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -464,7 +464,7 @@
                                     <div
                                         class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
                                         <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
                                         <button>Details</button>
                                     </div>
                                 </div>
@@ -588,6 +588,19 @@
 
     <!-- modal delete -->
 
+    <div class="modal fade" id="deletemodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center">
+                <div class="modal-body">
+                    <p class="fs-5">Are you sure you want to delete this announcement</p>
+                    <div class="d-flex justify-content-around p-3">
+                        <button class="btn-delete" type="button">Delete</button>
+                        <button class="btn-cancel" type="button" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
