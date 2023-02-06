@@ -12,7 +12,7 @@ if (isset($_GET["search"])) {
     }
 }
 
-function component($title,$image,$Description,$Space,$Address,$price,$date,$type){
+function component($title,$image,$Space,$Address,$price,$type){
 $element= "
  <div class=\"m-4\">
    <div class=\"card \" style=\"width: 18rem;\">
@@ -32,7 +32,7 @@ $element= "
     <div class=\"card-body\">
         <h5 class=\"card-title\">$title</h5>
 
-        <p class=\"card-text\">Some quick example text.</p>
+        <p class=\"card-text\">$Space<br>$price $type<br>$Address<br></p>
     </div>
 </div>
 ";
