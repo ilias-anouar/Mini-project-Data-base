@@ -4,9 +4,9 @@
 }
 
 
-.carousel-item  img {
-    height: 100vh;
-    filter: brightness(50%);
+.carousel-item img {
+  height: 100vh;
+  filter: brightness(50%);
 }
 
 
@@ -17,11 +17,11 @@
 **add the active color and bg color => for scrollspy.
  */
 #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background-color:  #38383891;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #38383891;
 }
 
 nav .navbar-nav li a {
@@ -125,6 +125,7 @@ main {
   border: none;
   border-radius: 10px;
 }
+
 button.save:hover {
   transition: 0.2s;
   color: #ad9663;
@@ -142,34 +143,24 @@ button.save:hover {
   border-bottom: #ad9663 solid 3px;
 }
 
-.cont {
+/* card overlay */
+.card-image {
   position: relative;
-  width: 100%;
 }
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-.middle {
-  background-color: black;
-  transition: 0.5s ease;
-  opacity: 0;
+.image-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-.container:hover .card {
-  opacity: 0.3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.cont:hover .middle {
+.card:hover .image-overlay {
   opacity: 1;
 }
