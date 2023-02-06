@@ -1,4 +1,4 @@
-<?php 
+<?php
 require "connect.php";
 
 if (isset($_GET["add"])) {
