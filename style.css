@@ -186,3 +186,14 @@ button.save:hover {
   font-weight: 700;
   padding: 5px 25px;
 }
+
+.btn-search{
+  border: none;
+  background-color: #ad9663;
+  color: white;
+}
+.btn-search:hover{
+  background-color: white;
+  color: #ad9663;
+  border: #ad9663 solid 1px;
+}

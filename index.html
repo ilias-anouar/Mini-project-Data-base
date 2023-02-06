@@ -83,26 +83,30 @@
                                     <div>
                                         <!-- content of search btn  -->
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <div class="d-flex gap-2">
-                                                <div>
-                                                    <select class="form-select" aria-label=".form-select" name="type"
-                                                        id="type">
-                                                        <option value="#">Type</option>
-                                                        <option value="Selling">Selling</option>
-                                                        <option value="Renting">Renting</option>
-                                                    </select>
-                                                </div>
-                                                <!-- min max price  -->
-                                                <div class="input-group gap-4">
-                                                    <input type="number" name="Price-max" class="form-control"
-                                                        placeholder="Max" aria-label="Max"
-                                                        aria-describedby="basic-addon1"></input>
+                                            <form action="search.php" method="get">
+                                                <div class="d-flex gap-2">
+                                                    <div>
+                                                        <select class="form-select" aria-label=".form-select"
+                                                            name="type" id="type">
+                                                            <option value="#">Type</option>
+                                                            <option value="Selling">Selling</option>
+                                                            <option value="Renting">Renting</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- min max price  -->
+                                                    <div class="input-group gap-3">
+                                                        <input type="number" name="Price-max" class="form-control"
+                                                            placeholder="Max price" aria-label="Max"
+                                                            aria-describedby="basic-addon1"></input>
 
-                                                    <input type="number" name="Price-min" class="form-control"
-                                                        placeholder="Min" aria-label="Min"
-                                                        aria-describedby="basic-addon1"></input>
+                                                        <input type="number" name="Price-min" class="form-control"
+                                                            placeholder="Min price" aria-label="Min"
+                                                            aria-describedby="basic-addon1"></input>
+                                                    </div>
+                                                    <button class="btn-search" type="submit">search</button>
                                                 </div>
-                                            </div>
+                                            </form>
+
                                         </div>
                                     </div>
                                 </div>
@@ -578,7 +582,7 @@
 
 
 
-    
+
 
     <!-- modal delete -->
 
