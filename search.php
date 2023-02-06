@@ -30,7 +30,7 @@ $element= "
         </div>
     </div>
     <div class=\"card-body\">
-        <h5 class=\"card-title\">Card title</h5>
+        <h5 class=\"card-title\">$title</h5>
 
         <p class=\"card-text\">Some quick example text.</p>
     </div>
