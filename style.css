@@ -166,7 +166,7 @@ button.save:hover {
 }
 
 /* modal */
-.modal-content {
+.delete {
   color: white;
   background-color: rgba(0, 0, 0, 0.50);
 }
