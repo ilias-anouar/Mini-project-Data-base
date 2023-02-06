@@ -12,14 +12,14 @@ if (isset($_GET["search"])) {
     }
 }
 
-function component(){
+function component($title,$image,$Description,$Space,$Address,$price,$date,$type){
 $element= "
  <div class=\"m-4\">
    <div class=\"card \" style=\"width: 18rem;\">
  
 
        <div class=\"card-image\">
-           <img class=\"card-img-top\" src=\"https://via.placeholder.com/150x100\"alt=\"Card image cap\">
+           <img class=\"card-img-top\" src=\"$image\" alt=\"Card image cap\">
 
        <div
             class=\"image-overlay d-flex flex-column gap-2 justify-content-center align-items-center\">
