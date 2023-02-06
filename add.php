@@ -1,5 +1,24 @@
 <?php 
 require "connect.php";
+
+if (isset($_GET["add"])) {
+    echo "hi";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $sql = "INSERT INTO advertisement  (`ID`, `title`, `image`, `description`, `Area`, `address`, `amount`, `Date`, `type`)
 VALUES (NUll, 'Doe', 'image', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis error soluta recusandae eligendi natus libero expedita totam neque, impedit illo! Omnis aut pariatur possimus ab id iusto. Delectus, obcaecati expedita','700','address addressaddressaddressaddress','12000000',now(),'selling' )";
 
