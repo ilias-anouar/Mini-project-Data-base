@@ -18,8 +18,7 @@ function component($title, $image, $Space, $Address, $price, $type)
 <div class=\"m-4\">
     <div class=\"card \" style=\"width: 18rem;\">
         <div class=\"card-image\">
-            <img class=\"card-img-top\" src=\"IMG/$image\" alt=\"Card image cap\">
-
+            <img class=\"card-img-top\" src=\"IMG/$image\"   width: 150px; height: 100px; alt=\"Card image cap\">
             <div class=\"image-overlay d-flex flex-column gap-2 justify-content-center align-items-center\">
                 <button>Edit</button>
 
