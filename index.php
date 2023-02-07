@@ -386,7 +386,6 @@ require_once('./search.php');
                         component();
                         component();
                         component();
-
                         ?>
 
                         <!-- <div class="m-4">
