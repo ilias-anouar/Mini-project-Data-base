@@ -371,7 +371,6 @@ require_once('./search.php')
             </section>
 
             <!-- adverts cards -->
-
             <section class="text-center" id="Adverts">
                 <h2 class="mb-5">OUR NEW ADVERT</h2>
 
@@ -379,229 +378,21 @@ require_once('./search.php')
                     <img src="IMG/side_image.png" alt="side-image">
 
                     <div class="d-flex justify-content-around gap-2 flex-wrap">
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
+                        <?php
+                        require "connect.php";
+                        $sql = "SELECT * FROM advertisement";
+                        $result = $conn->query($sql);
 
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button>Details</button>
-                                    </div>
-                                </div>
-
-                                <!--  -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-4">
-                            <div class="card" style="width: 18rem;">
-                                <!-- A div to hold img and img-overlay -->
-
-                                <div class="card-image">
-                                    <img class="card-img-top" src="https://via.placeholder.com/150x100"
-                                        alt="Card image cap">
-
-                                    <div
-                                        class="image-overlay d-flex flex-column gap-2 justify-content-center align-items-center">
-                                        <button>Edit</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
-
-                                        <button data-bs-toggle="modal" data-bs-target="#detailsModal">Details</button>
-                                    </div>
-                                </div>
-
-                                <!-- card body -->
-
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-
-                                    <p class="card-text">Some quick example text.</p>
-                                </div>
-                            </div>
-                        </div>
+                        if ($result->num_rows > 0) {
+                            // output data of each row
+                            while ($row = $result->fetch_assoc()) {
+                                component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type']);
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+                        $conn->close();
+                        ?>
                     </div>
 
                     <img src="IMG/side_image.png" alt="side-image">
