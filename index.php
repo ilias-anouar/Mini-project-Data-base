@@ -319,7 +319,7 @@ require_once('./search.php')
 
         <main class="pb-5">
             <section class="text-center pt-5 mb-5" id="Rate">
-                <h2 class="mb-5">BOSTON'S TOP OFFICE</h2>
+                <h2 class="mb-5"><span class="logo fs-1">HOME</span>'S TOP OFFICE</h2>
 
                 <div class="d-flex justify-content-around">
                     <div>
@@ -385,6 +385,8 @@ require_once('./search.php')
 
                         if ($result->num_rows > 0) {
                             // output data of each row
+                            for ($i=0; $i < 8; $i++) { 
+                            }
                             while ($row = $result->fetch_assoc()) {
                                 component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type']);
                             }
