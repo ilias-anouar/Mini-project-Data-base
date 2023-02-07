@@ -13,7 +13,7 @@ if (!empty($_GET["Space"])) {
 if (!empty($_GET["date"])) {
     $date = $_GET["date"];
 }else{
-    $date = now();
+    $date = 'now()';
 }
 if (!empty($_GET["price"])) {
     $price = $_GET["price"];

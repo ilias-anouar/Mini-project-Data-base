@@ -1,3 +1,8 @@
+<?php
+require_once('./search.php')
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -637,7 +642,7 @@
                 <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <div class="modal-body">
-                    <form class="text-center" action="add.php" method="get">
+                    <form class="text-center"  method="get">
                         <h2 class="fw-bold">Add advert</h2>
 
                         <div class="d-flex justify-content-evenly">
@@ -793,6 +798,12 @@
             </div>
         </div>
     </div>
+    <?php 
+    if (isset($_GET["add"])) {
+        require "add.php";
+    }
+    
+    ?>
 </body>
 
 </html>
