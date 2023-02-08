@@ -580,7 +580,7 @@ require_once('./search.php')
                     </p>
 
                     <div class="d-flex justify-content-around p-3">
-                        <button class="btn-delete" type="button">Delete</button>
+                        <button id="modal" class="btn-delete" type="button">Delete</button>
 
                         <button class="btn-cancel" type="button" data-bs-dismiss="modal">Cancel</button>
                     </div>

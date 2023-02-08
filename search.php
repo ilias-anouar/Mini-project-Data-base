@@ -22,7 +22,7 @@ function component($title, $image, $Space, $Address, $price, $type)
             <div class=\"image-overlay d-flex flex-column gap-2 justify-content-center align-items-center\">
                 <button>Edit</button>
 
-                <button data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\">Delete</button>
+                <button data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
                 <button>Details</button>
             </div>
         </div>
