@@ -379,7 +379,7 @@ require_once('./search.php')
                     <div class="d-flex justify-content-around gap-2 flex-wrap">
                         <?php
                         require "connect.php";
-                        $sql = "SELECT * FROM advertisement";
+                        $sql = "SELECT * FROM advertisement limit 8";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -595,7 +595,7 @@ require_once('./search.php')
 
     ?>
     <script>
-        const DELETE = document.querySelector('#delete')
+        const DELETE = document.querySelector('.delete')
         let modal = document.getElementById('modal')
         modal.addEventListener("click", function () {
             let item = DELETE.closest('div').parentNode.parentNode.parentNode
