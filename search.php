@@ -1,16 +1,17 @@
 <?php
 require "connect.php";
-if (isset($_GET["search"])) {
-    if ($_GET["type"] != null) {
-        $type = $_GET["type"];
-    }
-    if ($_GET["type"] != null) {
-        $max = $_GET["Price-max"];
-    }
-    if ($_GET["type"] != null) {
-        $min = $_GET["Price-min"];
-    }
+if ($_GET["type"] != null) {
+    $type = $_GET["type"];
 }
+if ($_GET["type"] != null) {
+    $max = $_GET["Price-max"];
+}
+if ($_GET["type"] != null) {
+    $min = $_GET["Price-min"];
+}
+ 
+$sql = "SELECT * FROM `advertisement` WHERE `amount` >= $min AND `amount` <= $max AND `type` = '$type'";
+$result = $conn->query($sql);
 
 function component($title, $image, $Space, $Address, $price, $type)
 {
