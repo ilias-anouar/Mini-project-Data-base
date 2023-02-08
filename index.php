@@ -376,7 +376,6 @@ require_once('./search.php')
 
                 <div class="d-flex">
                     <img src="IMG/side_image.png" alt="side-image">
-
                     <div class="d-flex justify-content-around gap-2 flex-wrap">
                         <?php
                         require "connect.php";
