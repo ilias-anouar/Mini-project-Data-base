@@ -384,8 +384,6 @@ require_once('./search.php')
 
                         if ($result->num_rows > 0) {
                             // output data of each row
-                            for ($i=0; $i < 8; $i++) { 
-                            }
                             while ($row = $result->fetch_assoc()) {
                                 component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type']);
                             }
