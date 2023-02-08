@@ -595,12 +595,11 @@ require_once('./component.php')
 
     ?>
     <script>
-        const DELETE = document.querySelector('.delete')
-        let modal = document.getElementById('modal')
-        modal.addEventListener("click", function () {
-            let item = DELETE.closest('div').parentNode.parentNode.parentNode
-            item.remove();
-        });
+        function remove(that) {
+            document.getElementById("modal").onclick = function () {
+                that.closest('div').parentNode.parentNode.parentNode.remove();;
+            };
+        }
     </script>
 </body>
 
