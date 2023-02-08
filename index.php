@@ -1,5 +1,5 @@
 <?php
-require_once('./search.php')
+require_once('./component.php')
     ?>
 
 
@@ -107,7 +107,7 @@ require_once('./search.php')
                                         <!-- content of search btn -->
 
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <form action="search.php" method="get">
+                                            <form action="search.php" action="search.php" method="get">
                                                 <div class="d-flex gap-2">
                                                     <div>
                                                         <select class="form-select" aria-label=".form-select"
