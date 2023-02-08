@@ -20,10 +20,10 @@ function component($title, $image, $Space, $Address, $price, $type)
         <div class=\"card-image\">
             <img class=\"card-img-top\" src=\"IMG/$image\"   width: 150px; height: 100px; alt=\"Card image cap\">
             <div class=\"image-overlay d-flex flex-column gap-2 justify-content-center align-items-center\">
-                <button>Edit</button>
+                <button class=\"save\">Edit</button>
 
-                <button data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
-                <button data-bs-toggle=\"modal\" data-bs-target=\"#detailsModal\" >Details</button>
+                <button class=\"save\" data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
+                <button class=\"save\" data-bs-toggle=\"modal\" data-bs-target=\"#detailsModal\" >Details</button>
             </div>
         </div>
         <div class=\"card-body\">

@@ -1,6 +1,6 @@
 <?php
 require_once('./search.php')
-?>
+    ?>
 
 
 <!DOCTYPE html>
@@ -432,7 +432,7 @@ require_once('./search.php')
                 <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <div class="modal-body">
-                    <form class="text-center"  method="get">
+                    <form class="text-center" method="get">
                         <h2 class="fw-bold">Add advert</h2>
 
                         <div class="d-flex justify-content-evenly">
@@ -580,7 +580,7 @@ require_once('./search.php')
                     </p>
 
                     <div class="d-flex justify-content-around p-3">
-                        <button id="modal" class="btn-delete" type="button">Delete</button>
+                        <button id="modal" class="btn-delete" type="button" data-bs-dismiss="modal">Delete</button>
 
                         <button class="btn-cancel" type="button" data-bs-dismiss="modal">Cancel</button>
                     </div>
@@ -588,12 +588,20 @@ require_once('./search.php')
             </div>
         </div>
     </div>
-    <?php 
+    <?php
     if (isset($_GET["add"])) {
         require "add.php";
     }
-    
+
     ?>
+    <script>
+        const DELETE = document.querySelector('#delete')
+        let modal = document.getElementById('modal')
+        modal.addEventListener("click", function () {
+            let item = DELETE.closest('div').parentNode.parentNode.parentNode
+            item.remove();
+        });
+    </script>
 </body>
 
 </html>
