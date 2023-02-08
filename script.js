@@ -1,5 +1,5 @@
-const DELETE = document.getElementById('delete')
-const modal = document.getElementById('modal')
-modal.addEventListener("click", function () {
-    DELETE.closest('div').remove();
+const DELETE = document.querySelector('#delete')
+
+DELETE.addEventListener("click", function () {
+  console.log(DELETE);
 });

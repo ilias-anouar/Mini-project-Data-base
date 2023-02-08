@@ -58,7 +58,7 @@ require_once('./search.php')
 
     <!-- link script -->
 
-    <script src="script.js" defer="defer"></script>
+    <script src="script.js" defer></script>
 
     <title>Home</title>
 </head>
