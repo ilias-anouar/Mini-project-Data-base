@@ -23,7 +23,7 @@ function component($title, $image, $Space, $Address, $price, $type)
                 <button>Edit</button>
 
                 <button data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
-                <button>Details</button>
+                <button data-bs-toggle=\"modal\" data-bs-target=\"#detailsModal\" >Details</button>
             </div>
         </div>
         <div class=\"card-body\">

@@ -1,6 +1,5 @@
 const DELETE = document.getElementById('delete')
-DELETE.addEventListener('click', function () {
-    let modal = document.getElementById("modal").onclick = function () {
-        console.log("done");
-    };
-})
+const modal = document.getElementById('modal')
+modal.addEventListener("click", function () {
+    DELETE.closest('div').remove();
+});
