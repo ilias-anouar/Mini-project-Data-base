@@ -385,7 +385,7 @@ require_once('./component.php')
                         if ($result->num_rows > 0) {
                             // output data of each row
                             while ($row = $result->fetch_assoc()) {
-                                component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type']);
+                                component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type'], $row['ID']);
                             }
                         } else {
                             echo "0 results";
@@ -580,8 +580,8 @@ require_once('./component.php')
                     </p>
 
                     <div class="d-flex justify-content-around p-3">
-                        <button id="modal" class="btn-delete" type="button" data-bs-dismiss="modal">Delete</button>
-
+                        <button name="delete" id="modal" class="btn-delete" type="submit"
+                            data-bs-dismiss="modal">Delete</button>
                         <button class="btn-cancel" type="button" data-bs-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -592,13 +592,15 @@ require_once('./component.php')
     if (isset($_GET["add"])) {
         require "add.php";
     }
-
+    // if (isset($_GET["delete"])) {
+    //     require("delete.php");
+    // }
     ?>
     <script>
-        function remove(that) {
-            document.getElementById("modal").onclick = function () {
-                that.closest('div').parentNode.parentNode.parentNode.remove();;
-            };
+        function Delete(ID) {
+            document.getElementById("delete").href = "delete.php?id=" + ID;
+            document.getElementById("delete").setAttribute("href", "delete.php?id=" + ID);
+            document.getElementById('product_info').style.display = 'block';
         }
     </script>
 </body>
