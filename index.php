@@ -10,13 +10,10 @@
 
     <!-- bootstrap cdn -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     </link>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <!-- text font -->
 
@@ -34,8 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
     </link>
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     </link>
 
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -61,8 +57,7 @@
 <body>
     <!-- slide -->
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
-        class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary rounded-2" tabindex="0">
         <header id="Home">
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -92,9 +87,7 @@
                                         <p>
                                             <!-- search btn -->
 
-                                            <button class="btn search" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#search-bar" aria-expanded="false"
-                                                aria-controls="search-bar">Search</button>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar" aria-expanded="false" aria-controls="search-bar">Search</button>
                                         </p>
                                     </div>
 
@@ -105,8 +98,7 @@
                                             <form action="search.php" action="search.php" method="get">
                                                 <div class="d-flex gap-2">
                                                     <div>
-                                                        <select class="form-select" aria-label=".form-select"
-                                                            name="type" id="type">
+                                                        <select class="form-select" aria-label=".form-select" name="type" id="type">
                                                             <option value="#">Type</option>
                                                             <option value="Selling">Selling</option>
                                                             <option value="Renting">Renting</option>
@@ -114,13 +106,9 @@
                                                     </div>
                                                     <!-- min max price  -->
                                                     <div class="input-group gap-3">
-                                                        <input type="number" name="Price-max" class="form-control"
-                                                            placeholder="Max price" aria-label="Max"
-                                                            aria-describedby="basic-addon1"></input>
+                                                        <input type="number" name="Price-max" class="form-control" placeholder="Max price" aria-label="Max" aria-describedby="basic-addon1"></input>
 
-                                                        <input type="number" name="Price-min" class="form-control"
-                                                            placeholder="Min price" aria-label="Min"
-                                                            aria-describedby="basic-addon1"></input>
+                                                        <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
                                                     </div>
                                                     <button name="search" class="save" type="submit">search</button>
                                                 </div>
@@ -148,43 +136,38 @@
                             <p class="display-5 fw-semibold m-lg-5">RECENTLY SOLD</p>
 
                             <div class="d-flex container justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex">
                                     <div>
                                         <p>
-                                            <!-- btn search -->
+                                            <!-- search btn -->
 
-                                            <button class="btn search" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#search-bar" aria-expanded="false"
-                                                aria-controls="search-bar">Search</button>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar" aria-expanded="false" aria-controls="search-bar">Search</button>
                                         </p>
                                     </div>
 
                                     <div>
+                                        <!-- content of search btn -->
+
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <select class="form-select" aria-label=".form-select" name="type"
-                                                        id="type">
-                                                        <option value="#">Type</option>
+                                            <form action="search.php" action="search.php" method="get">
+                                                <div class="d-flex gap-2">
+                                                    <div>
+                                                        <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                            <option value="#">Type</option>
+                                                            <option value="Selling">Selling</option>
+                                                            <option value="Renting">Renting</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- min max price  -->
+                                                    <div class="input-group gap-3">
+                                                        <input type="number" name="Price-max" class="form-control" placeholder="Max price" aria-label="Max" aria-describedby="basic-addon1"></input>
 
-                                                        <option value="Selling">Selling</option>
-
-                                                        <option value="Renting">Renting</option>
-                                                    </select>
+                                                        <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
+                                                    </div>
+                                                    <button name="search" class="save" type="submit">search</button>
                                                 </div>
+                                            </form>
 
-                                                <!-- input min max amount -->
-
-                                                <div class="input-group gap-4">
-                                                    <input type="number" name="Price-max" class="form-control"
-                                                        placeholder="Max" aria-label="Max"
-                                                        aria-describedby="basic-addon1"></input>
-
-                                                    <input type="number" name="Price-min" class="form-control"
-                                                        placeholder="Min" aria-label="Min"
-                                                        aria-describedby="basic-addon1"></input>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -207,45 +190,38 @@
                             <p class="display-5 fw-semibold m-lg-5">RECENTLY SOLD</p>
 
                             <div class="d-flex container justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex">
                                     <div>
                                         <p>
-                                            <!-- btn search -->
+                                            <!-- search btn -->
 
-                                            <button class="btn search" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#search-bar" aria-expanded="false"
-                                                aria-controls="search-bar">Search</button>
+                                            <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar" aria-expanded="false" aria-controls="search-bar">Search</button>
                                         </p>
                                     </div>
 
                                     <div>
+                                        <!-- content of search btn -->
+
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <!-- type od advert -->
+                                            <form action="search.php" action="search.php" method="get">
+                                                <div class="d-flex gap-2">
+                                                    <div>
+                                                        <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                            <option value="#">Type</option>
+                                                            <option value="Selling">Selling</option>
+                                                            <option value="Renting">Renting</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- min max price  -->
+                                                    <div class="input-group gap-3">
+                                                        <input type="number" name="Price-max" class="form-control" placeholder="Max price" aria-label="Max" aria-describedby="basic-addon1"></input>
 
-                                                    <select class="form-select" aria-label=".form-select" name="type"
-                                                        id="type">
-                                                        <option value="#">Type</option>
-
-                                                        <option value="Selling">Selling</option>
-
-                                                        <option value="Renting">Renting</option>
-                                                    </select>
+                                                        <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
+                                                    </div>
+                                                    <button name="search" class="save" type="submit">search</button>
                                                 </div>
+                                            </form>
 
-                                                <!-- min max price -->
-
-                                                <div class="input-group gap-4">
-                                                    <input type="number" name="Price-max" class="form-control"
-                                                        placeholder="Max" aria-label="Max"
-                                                        aria-describedby="basic-addon1"></input>
-
-                                                    <input type="number" name="Price-min" class="form-control"
-                                                        placeholder="Min" aria-label="Min"
-                                                        aria-describedby="basic-addon1"></input>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -280,9 +256,7 @@
 
                 <div class="container-fluid">
                     <div class="container-fluid mb-3">
-                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarToggleExternalContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
@@ -378,22 +352,16 @@
 
                         while ($row = $result->fetch_assoc()) {
                             // component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type'], $row['ID']);
-                            ?>
+                        ?>
                             <div class="m-4">
                                 <div class="card " style="width: 18rem;">
                                     <div class="card-image">
-                                        <img class="card-img-top" src="IMG/<?php echo $row['image'] ?>" width: 150px;
-                                            height: 100px; alt="Card image cap">
-                                        <div
-                                            class="image-overlay d-flex flex-column gap-2 justify-content-center
+                                        <img class="card-img-top" src="IMG/<?php echo $row['image'] ?>" width: 150px; height: 100px; alt="Card image cap">
+                                        <div class="image-overlay d-flex flex-column gap-2 justify-content-center
                                                                                                         align-items-center">
-                                            <button class="save" data-bs-toggle="modal"
-                                                data-bs-target="#modal-update<?php echo $row['ID'] ?>">Edit</button>
-                                            <button class="save" data-bs-toggle="modal"
-                                                data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
-                                            <button class="save delete" data-bs-toggle="modal"
-                                                data-bs-target="#deletemodal<?php echo $row['ID'] ?>"
-                                                id="delete">Delete</button>
+                                            <button class="save" data-bs-toggle="modal" data-bs-target="#modal-update<?php echo $row['ID'] ?>">Edit</button>
+                                            <button class="save" data-bs-toggle="modal" data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
+                                            <button class="save delete" data-bs-toggle="modal" data-bs-target="#deletemodal<?php echo $row['ID'] ?>" id="delete">Delete</button>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -411,9 +379,7 @@
                             </div>
                             <!-- modal delete -->
 
-                            <div class="modal fade" id="deletemodal<?php echo $row['ID'] ?>" tabindex="-1"
-                                data-bs-backdrop="static" data-bs-keyboard="true" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <div class="modal fade" id="deletemodal<?php echo $row['ID'] ?>" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="true" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content delete text-center">
                                         <div class="modal-body">
@@ -424,13 +390,11 @@
                                                         Are you sure you want to delete
                                                         <?php echo $row['title'] ?>?
                                                     </p>
-                                                    <button name="delete" id="modal" type="submit"
-                                                        class="btn-delete">Delete</button>
+                                                    <button name="delete" id="modal" type="submit" class="btn-delete">Delete</button>
                                                 </form>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn-cancel"
-                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn-cancel" data-bs-dismiss="modal">Close</button>
                                             </div>
                                         </div>
                                     </div>
@@ -438,16 +402,14 @@
                             </div>
                             <!-- modal details -->
 
-                            <div class="modal fade" id="detailsModal<?php echo $row['ID'] ?>" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="detailsModal<?php echo $row['ID'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-xl modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <div class="modal-body">
                                             <div class="card mb-3">
                                                 <div class="row g-0">
                                                     <div class="col-md-4">
-                                                        <img src="IMG/<?php echo $row['image'] ?>" alt="..."
-                                                            class="img-fluid rounded-start w-100 h-100">
+                                                        <img src="IMG/<?php echo $row['image'] ?>" alt="..." class="img-fluid rounded-start w-100 h-100">
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body">
@@ -492,12 +454,10 @@
                             </div>
                             <!-- modal update -->
 
-                            <div class="modal fade" id="modal-update<?php echo $row['ID'] ?>" tabindex="-1"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="modal-update<?php echo $row['ID'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
-                                        <button type="button" class="btn-close m-3" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                                        <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
                                         <div class="modal-body">
                                             <form action="update.php" class="text-center" method="get">
@@ -506,35 +466,25 @@
                                                 <div class="d-flex justify-content-evenly">
                                                     <div>
                                                         <div class="form-floating mb-3">
-                                                            <input name="title" type="text" class="form-control shadow-none"
-                                                                id="floatingInput" placeholder="Title"
-                                                                value="<?php echo $row['title'] ?>"></input>
+                                                            <input name="title" type="text" class="form-control shadow-none" id="floatingInput" placeholder="Title" value="<?php echo $row['title'] ?>"></input>
 
                                                             <label for="floatingInput">Title</label>
                                                         </div>
 
                                                         <div class="form-floating  mb-3">
-                                                            <input name="Address" type="text"
-                                                                class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Address"
-                                                                value="<?php echo $row['address'] ?> "></input>
+                                                            <input name="Address" type="text" class="form-control shadow-none" id="floatingPassword" placeholder="Address" value="<?php echo $row['address'] ?> "></input>
 
                                                             <label for="floatingPassword">Address</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <input name="Space" type="number"
-                                                                class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Space"
-                                                                value="<?php echo $row['Area'] ?>"></input>
+                                                            <input name="Space" type="number" class="form-control shadow-none" id="floatingPassword" placeholder="Space" value="<?php echo $row['Area'] ?>"></input>
 
                                                             <label for="floatingPassword">Space</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <input name="date" type="date" class="form-control shadow-none"
-                                                                id="floatingPassword" placeholder="Date"
-                                                                value="<?php echo $row['Date'] ?>" readonly></input>
+                                                            <input name="date" type="date" class="form-control shadow-none" id="floatingPassword" placeholder="Date" value="<?php echo $row['Date'] ?>" readonly></input>
 
                                                             <label for="floatingPassword">Date</label>
                                                         </div>
@@ -542,17 +492,13 @@
 
                                                     <div>
                                                         <div class="form-floating mb-3">
-                                                            <input name="price" type="number"
-                                                                class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Price"
-                                                                value="<?php echo $row['amount'] ?>"></input>
+                                                            <input name="price" type="number" class="form-control shadow-none" id="floatingPassword" placeholder="Price" value="<?php echo $row['amount'] ?>"></input>
 
                                                             <label for="floatingPassword">Price</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <select name="type" class="form-control shadow-none"
-                                                                aria-label=".form-select" id="type">
+                                                            <select name="type" class="form-control shadow-none" aria-label=".form-select" id="type">
 
                                                                 <option value="#"></option>
                                                                 <?php
@@ -571,17 +517,13 @@
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <input name="Description" class="form-control shadow-none"
-                                                                placeholder="Description" id="floatingTextarea2"
-                                                                style="height: 60px"
-                                                                value="<?php echo $row['description'] ?>"></input>
+                                                            <input name="Description" class="form-control shadow-none" placeholder="Description" id="floatingTextarea2" style="height: 60px" value="<?php echo $row['description'] ?>"></input>
 
                                                             <label for="floatingTextarea2">Description</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <input name="image" type="file" class="form-control shadow-none"
-                                                                id="floatingPassword" placeholder="Image"></input>
+                                                            <input name="image" type="file" class="form-control shadow-none" id="floatingPassword" placeholder="Image"></input>
                                                             <label for="floatingPassword">Image</label>
                                                         </div>
                                                     </div>
@@ -595,7 +537,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
                     </div>
@@ -616,29 +558,25 @@
                             <div class="d-flex justify-content-evenly">
                                 <div>
                                     <div class="form-floating mb-3">
-                                        <input name="title" type="text" class="form-control shadow-none"
-                                            id="floatingInput" placeholder="Title"></input>
+                                        <input name="title" type="text" class="form-control shadow-none" id="floatingInput" placeholder="Title"></input>
 
                                         <label for="floatingInput">Title</label>
                                     </div>
 
                                     <div class="form-floating  mb-3">
-                                        <input name="Address" type="text" class="form-control shadow-none"
-                                            id="floatingPassword" placeholder="Address"></input>
+                                        <input name="Address" type="text" class="form-control shadow-none" id="floatingPassword" placeholder="Address"></input>
 
                                         <label for="floatingPassword">Address</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input name="Space" type="number" class="form-control shadow-none"
-                                            id="floatingPassword" placeholder="Space"></input>
+                                        <input name="Space" type="number" class="form-control shadow-none" id="floatingPassword" placeholder="Space"></input>
 
                                         <label for="floatingPassword">Space</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input name="date" type="date" class="form-control shadow-none"
-                                            id="floatingPassword" placeholder="Date"></input>
+                                        <input name="date" type="date" class="form-control shadow-none" id="floatingPassword" placeholder="Date"></input>
 
                                         <label for="floatingPassword">Date</label>
                                     </div>
@@ -646,15 +584,13 @@
 
                                 <div>
                                     <div class="form-floating mb-3">
-                                        <input name="price" type="number" class="form-control shadow-none"
-                                            id="floatingPassword" placeholder="Price"></input>
+                                        <input name="price" type="number" class="form-control shadow-none" id="floatingPassword" placeholder="Price"></input>
 
                                         <label for="floatingPassword">Price</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <select name="type" class="form-control shadow-none" aria-label=".form-select"
-                                            id="type">
+                                        <select name="type" class="form-control shadow-none" aria-label=".form-select" id="type">
                                             <option value="#"></option>
 
                                             <option value="Selling">Selling</option>
@@ -666,16 +602,13 @@
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <textarea name="Description" class="form-control shadow-none"
-                                            placeholder="Description" id="floatingTextarea2"
-                                            style="height: 60px"></textarea>
+                                        <textarea name="Description" class="form-control shadow-none" placeholder="Description" id="floatingTextarea2" style="height: 60px"></textarea>
 
                                         <label for="floatingTextarea2">Description</label>
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input name="image" type="file" class="form-control shadow-none"
-                                            id="floatingPassword" placeholder="Image"></input>
+                                        <input name="image" type="file" class="form-control shadow-none" id="floatingPassword" placeholder="Image"></input>
 
                                         <label for="floatingPassword">Image</label>
                                     </div>
