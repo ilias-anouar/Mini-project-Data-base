@@ -506,7 +506,7 @@
                                                     <div>
                                                         <div class="form-floating mb-3">
                                                             <input name="title" type="text" class="form-control shadow-none"
-                                                                id="floatingInput" placeholder="Title" value></input>
+                                                                id="floatingInput" placeholder="Title" value="<?php echo $row['title'] ?>"></input>
 
                                                             <label for="floatingInput">Title</label>
                                                         </div>
