@@ -385,10 +385,11 @@
                                         <img class="card-img-top" src="IMG/<?php echo $row['image'] ?>" width: 150px;
                                             height: 100px; alt="Card image cap">
                                         <div class="image-overlay d-flex flex-column gap-2 justify-content-center
-                                                                                            align-items-center">
-                                            <button class="save">Edit</button>
+                                                                                                    align-items-center">
                                             <button class="save" data-bs-toggle="modal"
-                                                data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
+                                                data-bs-target="#modal-update<?php echo $row['ID'] ?>">Edit</button>
+                                                <button class="save" data-bs-toggle="modal"
+                                                    data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
                                             <button class="save delete" data-bs-toggle="modal"
                                                 data-bs-target="#deletemodal<?php echo $row['ID'] ?>"
                                                 id="delete">Delete</button>
@@ -444,8 +445,8 @@
                                             <div class="card mb-3">
                                                 <div class="row g-0">
                                                     <div class="col-md-4">
-                                                        <img src="IMG/<?php echo $row['image'] ?>"
-                                                          alt="..." class="img-fluid rounded-start w-100 h-100">
+                                                        <img src="IMG/<?php echo $row['image'] ?>" alt="..."
+                                                            class="img-fluid rounded-start w-100 h-100">
                                                     </div>
                                                     <div class="col-md-8">
                                                         <div class="card-body">
@@ -484,6 +485,99 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal ADD -->
+
+                            <div class="modal fade" id="modal-update<?php echo $row['ID']?>" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <button type="button" class="btn-close m-3" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+
+                                        <div class="modal-body">
+                                            <form class="text-center" method="get">
+                                                <h2 class="fw-bold">Update advert</h2>
+
+                                                <div class="d-flex justify-content-evenly">
+                                                    <div>
+                                                        <div class="form-floating mb-3">
+                                                            <input name="title" type="text" class="form-control shadow-none"
+                                                                id="floatingInput" placeholder="Title" value></input>
+
+                                                            <label for="floatingInput">Title</label>
+                                                        </div>
+
+                                                        <div class="form-floating  mb-3">
+                                                            <input name="Address" type="text"
+                                                                class="form-control shadow-none" id="floatingPassword"
+                                                                placeholder="Address"></input>
+
+                                                            <label for="floatingPassword">Address</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3">
+                                                            <input name="Space" type="number"
+                                                                class="form-control shadow-none" id="floatingPassword"
+                                                                placeholder="Space"></input>
+
+                                                            <label for="floatingPassword">Space</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3">
+                                                            <input name="date" type="date" class="form-control shadow-none"
+                                                                id="floatingPassword" placeholder="Date"></input>
+
+                                                            <label for="floatingPassword">Date</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="form-floating mb-3">
+                                                            <input name="price" type="number"
+                                                                class="form-control shadow-none" id="floatingPassword"
+                                                                placeholder="Price"></input>
+
+                                                            <label for="floatingPassword">Price</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3">
+                                                            <select name="type" class="form-control shadow-none"
+                                                                aria-label=".form-select" id="type">
+                                                                <option value="#"></option>
+
+                                                                <option value="Selling">Selling</option>
+
+                                                                <option value="Renting">Renting</option>
+                                                            </select>
+
+                                                            <label for="Type">Type</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3">
+                                                            <textarea name="Description" class="form-control shadow-none"
+                                                                placeholder="Description" id="floatingTextarea2"
+                                                                style="height: 60px"></textarea>
+
+                                                            <label for="floatingTextarea2">Description</label>
+                                                        </div>
+
+                                                        <div class="form-floating mb-3">
+                                                            <input name="image" type="file" class="form-control shadow-none"
+                                                                id="floatingPassword" placeholder="Image"></input>
+
+                                                            <label for="floatingPassword">Image</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
+                                                    <button name="add" type="submit" class="save">ADD</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
