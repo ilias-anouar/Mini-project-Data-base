@@ -136,36 +136,38 @@
                             <p class="display-5 fw-semibold m-lg-5">RECENTLY SOLD</p>
 
                             <div class="d-flex container justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex">
                                     <div>
                                         <p>
-                                            <!-- btn search -->
+                                            <!-- search btn -->
 
                                             <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar" aria-expanded="false" aria-controls="search-bar">Search</button>
                                         </p>
                                     </div>
 
                                     <div>
+                                        <!-- content of search btn -->
+
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <select class="form-select" aria-label=".form-select" name="type" id="type">
-                                                        <option value="#">Type</option>
+                                            <form action="search.php" action="search.php" method="get">
+                                                <div class="d-flex gap-2">
+                                                    <div>
+                                                        <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                            <option value="#">Type</option>
+                                                            <option value="Selling">Selling</option>
+                                                            <option value="Renting">Renting</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- min max price  -->
+                                                    <div class="input-group gap-3">
+                                                        <input type="number" name="Price-max" class="form-control" placeholder="Max price" aria-label="Max" aria-describedby="basic-addon1"></input>
 
-                                                        <option value="Selling">Selling</option>
-
-                                                        <option value="Renting">Renting</option>
-                                                    </select>
+                                                        <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
+                                                    </div>
+                                                    <button name="search" class="save" type="submit">search</button>
                                                 </div>
+                                            </form>
 
-                                                <!-- input min max amount -->
-
-                                                <div class="input-group gap-4">
-                                                    <input type="number" name="Price-max" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon1"></input>
-
-                                                    <input type="number" name="Price-min" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon1"></input>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -188,38 +190,38 @@
                             <p class="display-5 fw-semibold m-lg-5">RECENTLY SOLD</p>
 
                             <div class="d-flex container justify-content-between">
-                                <div class="d-flex">
+                            <div class="d-flex">
                                     <div>
                                         <p>
-                                            <!-- btn search -->
+                                            <!-- search btn -->
 
                                             <button class="btn search" type="button" data-bs-toggle="collapse" data-bs-target="#search-bar" aria-expanded="false" aria-controls="search-bar">Search</button>
                                         </p>
                                     </div>
 
                                     <div>
+                                        <!-- content of search btn -->
+
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <div class="d-flex">
-                                                <div>
-                                                    <!-- type od advert -->
+                                            <form action="search.php" action="search.php" method="get">
+                                                <div class="d-flex gap-2">
+                                                    <div>
+                                                        <select class="form-select" aria-label=".form-select" name="type" id="type">
+                                                            <option value="#">Type</option>
+                                                            <option value="Selling">Selling</option>
+                                                            <option value="Renting">Renting</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- min max price  -->
+                                                    <div class="input-group gap-3">
+                                                        <input type="number" name="Price-max" class="form-control" placeholder="Max price" aria-label="Max" aria-describedby="basic-addon1"></input>
 
-                                                    <select class="form-select" aria-label=".form-select" name="type" id="type">
-                                                        <option value="#">Type</option>
-
-                                                        <option value="Selling">Selling</option>
-
-                                                        <option value="Renting">Renting</option>
-                                                    </select>
+                                                        <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
+                                                    </div>
+                                                    <button name="search" class="save" type="submit">search</button>
                                                 </div>
+                                            </form>
 
-                                                <!-- min max price -->
-
-                                                <div class="input-group gap-4">
-                                                    <input type="number" name="Price-max" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon1"></input>
-
-                                                    <input type="number" name="Price-min" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon1"></input>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
