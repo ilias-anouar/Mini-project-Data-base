@@ -384,12 +384,13 @@
                                     <div class="card-image">
                                         <img class="card-img-top" src="IMG/<?php echo $row['image'] ?>" width: 150px;
                                             height: 100px; alt="Card image cap">
-                                        <div class="image-overlay d-flex flex-column gap-2 justify-content-center
-                                                                                                    align-items-center">
+                                        <div
+                                            class="image-overlay d-flex flex-column gap-2 justify-content-center
+                                                                                                        align-items-center">
                                             <button class="save" data-bs-toggle="modal"
                                                 data-bs-target="#modal-update<?php echo $row['ID'] ?>">Edit</button>
-                                                <button class="save" data-bs-toggle="modal"
-                                                    data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
+                                            <button class="save" data-bs-toggle="modal"
+                                                data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
                                             <button class="save delete" data-bs-toggle="modal"
                                                 data-bs-target="#deletemodal<?php echo $row['ID'] ?>"
                                                 id="delete">Delete</button>
@@ -418,7 +419,7 @@
                                         <div class="modal-body">
                                             <div class="d-flex justify-content-around p-3">
                                                 <form action="delete.php" method="post">
-                                                    <input name="ID" type="text" value="<?php echo $row['ID'] ?>">
+                                                    <input name="ID" type="hidden" value="<?php echo $row['ID'] ?>">
                                                     <p class="fs-5">
                                                         Are you sure you want to delete
                                                         <?php echo $row['title'] ?>?
@@ -489,24 +490,25 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- modal ADD -->
+                            <!-- modal update -->
 
-                            <div class="modal fade" id="modal-update<?php echo $row['ID']?>" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <div class="modal fade" id="modal-update<?php echo $row['ID'] ?>" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                                     <div class="modal-content">
                                         <button type="button" class="btn-close m-3" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
 
                                         <div class="modal-body">
-                                            <form class="text-center" method="get">
+                                            <form action="update.php" class="text-center" method="get">
                                                 <h2 class="fw-bold">Update advert</h2>
-
+                                                <input name="ID" type="hidden" value="<?php echo $row['ID'] ?>">
                                                 <div class="d-flex justify-content-evenly">
                                                     <div>
                                                         <div class="form-floating mb-3">
                                                             <input name="title" type="text" class="form-control shadow-none"
-                                                                id="floatingInput" placeholder="Title" value="<?php echo $row['title'] ?>"></input>
+                                                                id="floatingInput" placeholder="Title"
+                                                                value="<?php echo $row['title'] ?>"></input>
 
                                                             <label for="floatingInput">Title</label>
                                                         </div>
@@ -514,7 +516,8 @@
                                                         <div class="form-floating  mb-3">
                                                             <input name="Address" type="text"
                                                                 class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Address"></input>
+                                                                placeholder="Address"
+                                                                value="<?php echo $row['address'] ?> "></input>
 
                                                             <label for="floatingPassword">Address</label>
                                                         </div>
@@ -522,14 +525,16 @@
                                                         <div class="form-floating mb-3">
                                                             <input name="Space" type="number"
                                                                 class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Space"></input>
+                                                                placeholder="Space"
+                                                                value="<?php echo $row['Area'] ?>"></input>
 
                                                             <label for="floatingPassword">Space</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
                                                             <input name="date" type="date" class="form-control shadow-none"
-                                                                id="floatingPassword" placeholder="Date"></input>
+                                                                id="floatingPassword" placeholder="Date"
+                                                                value="<?php echo $row['Date'] ?>" readonly></input>
 
                                                             <label for="floatingPassword">Date</label>
                                                         </div>
@@ -539,7 +544,8 @@
                                                         <div class="form-floating mb-3">
                                                             <input name="price" type="number"
                                                                 class="form-control shadow-none" id="floatingPassword"
-                                                                placeholder="Price"></input>
+                                                                placeholder="Price"
+                                                                value="<?php echo $row['amount'] ?>"></input>
 
                                                             <label for="floatingPassword">Price</label>
                                                         </div>
@@ -547,20 +553,28 @@
                                                         <div class="form-floating mb-3">
                                                             <select name="type" class="form-control shadow-none"
                                                                 aria-label=".form-select" id="type">
+
                                                                 <option value="#"></option>
-
-                                                                <option value="Selling">Selling</option>
-
-                                                                <option value="Renting">Renting</option>
+                                                                <?php
+                                                                $type = array("Selling", "Renting");
+                                                                for ($i = 0; $i < count($type); $i++) {
+                                                                    if ($type[$i] == $row['type']) {
+                                                                        echo "<option value='$type[$i]' selected>$type[$i]</option>";
+                                                                    } else {
+                                                                        echo "<option value='$type[$i]'>$type[$i]</option>";
+                                                                    }
+                                                                }
+                                                                ?>
                                                             </select>
 
                                                             <label for="Type">Type</label>
                                                         </div>
 
                                                         <div class="form-floating mb-3">
-                                                            <textarea name="Description" class="form-control shadow-none"
+                                                            <input name="Description" class="form-control shadow-none"
                                                                 placeholder="Description" id="floatingTextarea2"
-                                                                style="height: 60px"></textarea>
+                                                                style="height: 60px"
+                                                                value="<?php echo $row['description'] ?>"></input>
 
                                                             <label for="floatingTextarea2">Description</label>
                                                         </div>
@@ -568,14 +582,13 @@
                                                         <div class="form-floating mb-3">
                                                             <input name="image" type="file" class="form-control shadow-none"
                                                                 id="floatingPassword" placeholder="Image"></input>
-
                                                             <label for="floatingPassword">Image</label>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
-                                                    <button name="add" type="submit" class="save">ADD</button>
+                                                    <button name="update" type="submit" class="save">ADD</button>
                                                 </div>
                                             </form>
                                         </div>
