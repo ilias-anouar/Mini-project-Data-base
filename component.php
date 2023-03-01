@@ -9,7 +9,7 @@ function component($title, $image, $Space, $Address, $price,$type,$id)
             <div class=\"image-overlay d-flex flex-column gap-2 justify-content-center align-items-center\">
                 <button class=\"save\">Edit</button>
                 <button class=\"save\" data-bs-toggle=\"modal\" data-bs-target=\"#detailsModal\" >Details</button>
-                <button class=\"save delete\" onclick=\"Delete($id)\" data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
+                <button class=\"save delete\" data-bs-toggle=\"modal\" data-bs-target=\"#deletemodal\" id=\"delete\">Delete</button>
             </div>
         </div>
         <div class=\"card-body\">

@@ -37,4 +37,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->connect_error;
 }
 $conn->close();
+header("Location: index.php")
 ?>

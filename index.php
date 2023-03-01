@@ -1,8 +1,3 @@
-<?php
-require_once('./component.php')
-    ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -375,30 +370,219 @@ require_once('./component.php')
                 <h2 class="mb-5">OUR NEW ADVERT</h2>
 
                 <div class="d-flex">
-                    <img src="IMG/side_image.png" alt="side-image">
                     <div class="d-flex justify-content-around gap-2 flex-wrap">
                         <?php
                         require "connect.php";
                         $sql = "SELECT * FROM advertisement limit 8";
                         $result = $conn->query($sql);
 
-                        if ($result->num_rows > 0) {
-                            // output data of each row
-                            while ($row = $result->fetch_assoc()) {
-                                component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type'], $row['ID']);
-                            }
-                        } else {
-                            echo "0 results";
+                        while ($row = $result->fetch_assoc()) {
+                            // component($row['title'], $row['image'], $row['Area'], $row['address'], $row['amount'], $row['type'], $row['ID']);
+                            ?>
+                            <div class="m-4">
+                                <div class="card " style="width: 18rem;">
+                                    <div class="card-image">
+                                        <img class="card-img-top" src="IMG/<?php echo $row['image'] ?>" width: 150px;
+                                            height: 100px; alt="Card image cap">
+                                        <div class="image-overlay d-flex flex-column gap-2 justify-content-center
+                                                                                            align-items-center">
+                                            <button class="save">Edit</button>
+                                            <button class="save" data-bs-toggle="modal"
+                                                data-bs-target="#detailsModal<?php echo $row['ID'] ?>">Details</button>
+                                            <button class="save delete" data-bs-toggle="modal"
+                                                data-bs-target="#deletemodal<?php echo $row['ID'] ?>"
+                                                id="delete">Delete</button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <?php echo $row['title'] ?>
+                                        </h5>
+
+                                        <p class="card-text">
+                                            <?php echo $row['Area'] ?><br>
+                                            <?php echo $row['amount'] ?>
+                                            <?php echo $row['type'] ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal delete -->
+
+                            <div class="modal fade" id="deletemodal<?php echo $row['ID'] ?>" tabindex="-1"
+                                data-bs-backdrop="static" data-bs-keyboard="true" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content delete text-center">
+                                        <div class="modal-body">
+                                            <div class="d-flex justify-content-around p-3">
+                                                <form action="delete.php" method="post">
+                                                    <input name="ID" type="text" value="<?php echo $row['ID'] ?>">
+                                                    <p class="fs-5">
+                                                        Are you sure you want to delete
+                                                        <?php echo $row['title'] ?>?
+                                                    </p>
+                                                    <button name="delete" id="modal" type="submit"
+                                                        class="btn-delete">Delete</button>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn-cancel"
+                                                    data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- modal details -->
+
+                            <div class="modal fade" id="detailsModal<?php echo $row['ID'] ?>" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-4">
+                                                        <img src="IMG/<?php echo $row['image'] ?>"
+                                                          alt="..." class="img-fluid rounded-start w-100 h-100">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">
+                                                                <?php echo $row['title'] ?>
+                                                            </h5>
+                                                            <!-- address -->
+                                                            <p class="card-text">
+                                                                <?php echo $row['address'] ?>
+                                                            </p>
+                                                            <!-- price -->
+                                                            <p class="card-text">
+                                                                <small class="text-muted">
+                                                                    <?php echo $row['amount'] ?> $
+                                                                </small>
+                                                            </p>
+
+                                                            <!-- superficie -->
+                                                            <p class="card-text">
+                                                                <small class="text-muted">
+                                                                    <?php echo $row['Area'] ?> m²
+                                                                </small>
+                                                            </p>
+
+                                                            <!-- type -->
+                                                            <p class="card-text">
+                                                                <small class="text-muted">
+                                                                    <?php echo $row['type'] ?>
+                                                                </small>
+                                                            </p>
+                                                            <!-- description -->
+                                                            <p class="card-text">
+                                                                <?php echo $row['description'] ?>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
                         }
-                        $conn->close();
                         ?>
                     </div>
-
-                    <img src="IMG/side_image.png" alt="side-image">
                 </div>
             </section>
         </main>
+        <!-- modal ADD -->
 
+        <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <div class="modal-body">
+                        <form class="text-center" method="get">
+                            <h2 class="fw-bold">Add advert</h2>
+
+                            <div class="d-flex justify-content-evenly">
+                                <div>
+                                    <div class="form-floating mb-3">
+                                        <input name="title" type="text" class="form-control shadow-none"
+                                            id="floatingInput" placeholder="Title"></input>
+
+                                        <label for="floatingInput">Title</label>
+                                    </div>
+
+                                    <div class="form-floating  mb-3">
+                                        <input name="Address" type="text" class="form-control shadow-none"
+                                            id="floatingPassword" placeholder="Address"></input>
+
+                                        <label for="floatingPassword">Address</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input name="Space" type="number" class="form-control shadow-none"
+                                            id="floatingPassword" placeholder="Space"></input>
+
+                                        <label for="floatingPassword">Space</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input name="date" type="date" class="form-control shadow-none"
+                                            id="floatingPassword" placeholder="Date"></input>
+
+                                        <label for="floatingPassword">Date</label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="form-floating mb-3">
+                                        <input name="price" type="number" class="form-control shadow-none"
+                                            id="floatingPassword" placeholder="Price"></input>
+
+                                        <label for="floatingPassword">Price</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <select name="type" class="form-control shadow-none" aria-label=".form-select"
+                                            id="type">
+                                            <option value="#"></option>
+
+                                            <option value="Selling">Selling</option>
+
+                                            <option value="Renting">Renting</option>
+                                        </select>
+
+                                        <label for="Type">Type</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <textarea name="Description" class="form-control shadow-none"
+                                            placeholder="Description" id="floatingTextarea2"
+                                            style="height: 60px"></textarea>
+
+                                        <label for="floatingTextarea2">Description</label>
+                                    </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input name="image" type="file" class="form-control shadow-none"
+                                            id="floatingPassword" placeholder="Image"></input>
+
+                                        <label for="floatingPassword">Image</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
+                                <button name="add" type="submit" class="save">ADD</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- footer -->
 
         <footer class="text-center pt-5 pb-5" id="Contact">
@@ -423,171 +607,6 @@ require_once('./component.php')
             </div>
         </footer>
     </div>
-
-    <!-- modal ADD -->
-
-    <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-
-                <div class="modal-body">
-                    <form class="text-center" method="get">
-                        <h2 class="fw-bold">Add advert</h2>
-
-                        <div class="d-flex justify-content-evenly">
-                            <div>
-                                <div class="form-floating mb-3">
-                                    <input name="title" type="text" class="form-control shadow-none" id="floatingInput"
-                                        placeholder="Title"></input>
-
-                                    <label for="floatingInput">Title</label>
-                                </div>
-
-                                <div class="form-floating  mb-3">
-                                    <input name="Address" type="text" class="form-control shadow-none"
-                                        id="floatingPassword" placeholder="Address"></input>
-
-                                    <label for="floatingPassword">Address</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input name="Space" type="number" class="form-control shadow-none"
-                                        id="floatingPassword" placeholder="Space"></input>
-
-                                    <label for="floatingPassword">Space</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input name="date" type="date" class="form-control shadow-none"
-                                        id="floatingPassword" placeholder="Date"></input>
-
-                                    <label for="floatingPassword">Date</label>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="form-floating mb-3">
-                                    <input name="price" type="number" class="form-control shadow-none"
-                                        id="floatingPassword" placeholder="Price"></input>
-
-                                    <label for="floatingPassword">Price</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <select name="type" class="form-control shadow-none" aria-label=".form-select"
-                                        id="type">
-                                        <option value="#"></option>
-
-                                        <option value="Selling">Selling</option>
-
-                                        <option value="Renting">Renting</option>
-                                    </select>
-
-                                    <label for="Type">Type</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <textarea name="Description" class="form-control shadow-none"
-                                        placeholder="Description" id="floatingTextarea2"
-                                        style="height: 60px"></textarea>
-
-                                    <label for="floatingTextarea2">Description</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input name="image" type="file" class="form-control shadow-none"
-                                        id="floatingPassword" placeholder="Image"></input>
-
-                                    <label for="floatingPassword">Image</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="d-flex justify-content-center align-items-center mb-3 mt-3">
-                            <button name="add" type="submit" class="save">ADD</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal details -->
-
-    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable ">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="..." class="img-fluid rounded-start" alt="...">
-                            </div>
-
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">BOSTON ,MA</h5>
-                                    <!-- adresse -->
-                                    <p class="card-text">
-                                        401 BACON STREAT .
-                                    </p>
-                                    <!-- price -->
-                                    <p class="card-text">
-                                        <small class="text-muted">$4,950,000</small>
-                                    </p>
-
-                                    <!-- superficie -->
-                                    <p class="card-text">
-                                        <small class="text-muted">700 m²</small>
-                                    </p>
-
-                                    <!-- type -->
-                                    <p class="card-text">
-                                        <small class="text-muted">$4,950,000</small>
-                                    </p>
-                                    <!-- description -->
-                                    <p class="card-text">
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                        Bedrooms 4 | Bath1 | Half Baths 4,140
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal delete -->
-
-    <div class="modal fade" id="deletemodal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content delete text-center">
-                <div class="modal-body">
-                    <p class="fs-5">
-                        Are you sure you want to delete this announcement
-                    </p>
-
-                    <div class="d-flex justify-content-around p-3">
-                        <button name="delete" id="modal" class="btn-delete" type="submit"
-                            data-bs-dismiss="modal">Delete</button>
-                        <button class="btn-cancel" type="button" data-bs-dismiss="modal">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <?php
     if (isset($_GET["add"])) {
         require "add.php";
@@ -596,13 +615,13 @@ require_once('./component.php')
     //     require("delete.php");
     // }
     ?>
-    <script>
+    <!-- <script>
         function Delete(ID) {
             document.getElementById("delete").href = "delete.php?id=" + ID;
             document.getElementById("delete").setAttribute("href", "delete.php?id=" + ID);
             document.getElementById('product_info').style.display = 'block';
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
