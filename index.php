@@ -1,3 +1,48 @@
+<?php            
+require  'connect.php';
+
+
+
+$searchConditions = [];
+
+
+if(isset($_POST['search'])){
+
+    if (!empty($_POST['type'])){
+
+       $searchConditions[]= "type= '{$_POST['type']}' ";
+
+    }
+
+    if(!empty($_POST['Price-max'])){
+
+        $searchConditions[]= "price= '{$_POST['Price-max']}'";
+
+    }
+
+     if (!empty($_post['Price-min '])){
+        $searchConditions[] =" price = '{$_POST['Price-min']}' ";
+     }
+     
+
+     if (!empty($searchConditions)) {
+        $whereClause = 'WHERE ' . implode(' AND ', $searchConditions);
+    } else {
+        $whereClause = '';
+    }
+
+    $sql = "SELECT * FROM `advertisement` $whereClause ";
+    $result = mysqli_query($conn, $sql);
+
+}
+
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +140,7 @@
                                         <!-- content of search btn -->
 
                                         <div class="collapse collapse-horizontal p-3 bg-color" id="search-bar">
-                                            <form action="search.php" action="search.php" method="get">
+                                            <form   action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                                                 <div class="d-flex gap-2">
                                                     <div>
                                                         <select class="form-select" aria-label=".form-select" name="type" id="type">
@@ -110,7 +155,7 @@
 
                                                         <input type="number" name="Price-min" class="form-control" placeholder="Min price" aria-label="Min" aria-describedby="basic-addon1"></input>
                                                     </div>
-                                                    <button name="search" class="save" type="submit">search</button>
+                                                    <button name="searchbtn" class="save" type="submit">search</button>
                                                 </div>
                                             </form>
 
