@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?php            
 require  'connect.php';
 
@@ -37,12 +38,22 @@ if(isset($_POST['search'])){
 }
 
 
+=======
+<?php 
+
+
+
+>>>>>>> Stashed changes
 
 
 ?>
 
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,6 +183,7 @@ if(isset($_POST['search'])){
 
                     <!-- seconde slide -->
 
+                    
                     <div class="carousel-item">
                         <img src="IMG/sl1.jpg" alt="Chicago" class="d-block w-100">
 
